@@ -1,0 +1,449 @@
+//Simple If
+import java.util.Scanner;
+
+public class SimpleIf {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+
+        if (x > 5) {
+            System.out.println("X is greater than 5");
+        }
+    }
+}
+Input:9 Output:X is greater than 5
+
+//Positive or Negative
+import java.util.Scanner;
+
+public class PositiveNegative {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n > 0)
+            System.out.println("Number is Positive");
+        else
+            System.out.println("Number is Negative");
+    }
+}
+
+Input: -3 → Output: Number is Negative
+
+//Positive or Negative
+import java.util.Scanner;
+
+public class PositiveNegative {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n > 0)
+            System.out.println("Number is Positive");
+        else
+            System.out.println("Number is Negative");
+    }
+}
+
+Input: -3 → Output: Number is Negative
+
+//Positive or Negative (>=0)
+import java.util.Scanner;
+
+public class PositiveNegative2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n >= 0)
+            System.out.println("Number is Positive");
+        else
+            System.out.println("Number is Negative");
+    }
+}
+
+Input: 0 → Output: Number is Positive
+
+//Greatest of Two Numbers
+import java.util.Scanner;
+
+public class GreatestTwo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if (a > b)
+            System.out.println("num1 is greater");
+        else
+            System.out.println("num2 is greater");
+    }
+}
+
+Compare Two Numbers
+import java.util.Scanner;
+
+public class CompareNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if (a > b)
+            System.out.println("A is greater than B");
+        else if (a < b)
+            System.out.println("A is less than B");
+        else
+            System.out.println("Both numbers are equal");
+    }
+}
+
+Input: 5 5 → Output: Both numbers are equal
+
+//Grade System
+import java.util.Scanner;
+
+public class GradeSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int marks = sc.nextInt();
+
+        if (marks >= 90)
+            System.out.println("Grade A");
+        else if (marks >= 80)
+            System.out.println("Grade B");
+        else if (marks >= 70)
+            System.out.println("Grade C");
+        else if (marks >= 60)
+            System.out.println("Grade D");
+        else
+            System.out.println("Grade F");
+    }
+}
+
+Input: 85 → Output: Grade B
+
+//Quadrant of Coordinates
+import java.util.Scanner;
+
+public class Quadrant {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+
+        if (x > 0 && y > 0)
+            System.out.println("Quadrant 1");
+        else if (x < 0 && y > 0)
+            System.out.println("Quadrant 2");
+        else if (x < 0 && y < 0)
+            System.out.println("Quadrant 3");
+        else if (x > 0 && y < 0)
+            System.out.println("Quadrant 4");
+        else
+            System.out.println("Point lies on Axis");
+    }
+}
+
+Input: 4 5 → Output: Quadrant 1
+
+//Login System
+import java.util.Scanner;
+
+public class LoginSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String username = sc.next();
+        String password = sc.next();
+
+        if (username.equals("admin")) {
+            if (password.equals("1234"))
+                System.out.println("Login Successful");
+            else
+                System.out.println("Incorrect Password");
+        } else {
+            System.out.println("Invalid Username");
+        }
+    }
+}
+
+Input: admin 1234 → Output: Login Successful
+
+
+//Access Array
+import java.util.Scanner;
+
+public class AccessArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+
+        for (int i = 0; i < 5; i++)
+            a[i] = sc.nextInt();
+
+        for (int i = 0; i < 5; i++)
+            System.out.print(a[i] + " ");
+    }
+}
+
+Input: 1 2 3 4 5 → Output: 1 2 3 4 5
+
+//Sum of Array
+import java.util.Scanner;
+
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+        int sum = 0;
+
+        for (int i = 0; i < 5; i++) {
+            a[i] = sc.nextInt();
+            sum += a[i];
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+Input: 1 2 3 4 5 → Output: Sum = 15
+
+//Maximum in Array
+import java.util.Scanner;
+
+public class MaxArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+
+        for (int i = 0; i < 5; i++)
+            a[i] = sc.nextInt();
+
+        int max = a[0];
+
+        for (int i = 1; i < 5; i++) {
+            if (a[i] > max)
+                max = a[i];
+        }
+
+        System.out.println("Maximum = " + max);
+    }
+}
+
+Input: 3 7 1 9 5 → Output: Maximum = 9
+
+//Minimum in Array
+import java.util.Scanner;
+
+public class MinArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+
+        for (int i = 0; i < 5; i++)
+            a[i] = sc.nextInt();
+
+        int min = a[0];
+
+        for (int i = 1; i < 5; i++) {
+            if (a[i] < min)
+                min = a[i];
+        }
+
+        System.out.println("Minimum = " + min);
+    }
+}
+
+Input: 3 7 1 9 5 → Output: Minimum = 1
+
+Access Elements of 2×2 Matrix
+import java.util.Scanner;
+
+public class MatrixAccess {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] A = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                A[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Input: 1 2 3 4 → Output:
+
+1 2
+3 4
+
+Sum of Elements in 2×2 Matrix
+import java.util.Scanner;
+
+public class MatrixSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] A = new int[2][2];
+        int sum = 0;
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                A[i][j] = sc.nextInt();
+                sum += A[i][j];
+            }
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+Input: 1 2 3 4 → Output: Sum = 10
+
+//Addition of Two 2×2 Matrices
+import java.util.Scanner;
+
+public class MatrixAddition {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] A = new int[2][2];
+        int[][] B = new int[2][2];
+        int[][] C = new int[2][2];
+
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                A[i][j] = sc.nextInt();
+
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                B[i][j] = sc.nextInt();
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                C[i][j] = A[i][j] + B[i][j];
+                System.out.print(C[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Input: 1 2 3 4 5 6 7 8 → Output:
+
+6 8
+10 12
+
+//Subtraction of Two 2×2 Matrices
+import java.util.Scanner;
+
+public class MatrixSubtraction {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] A = new int[2][2];
+        int[][] B = new int[2][2];
+        int[][] C = new int[2][2];
+
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                A[i][j] = sc.nextInt();
+
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
+                B[i][j] = sc.nextInt();
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                C[i][j] = A[i][j] - B[i][j];
+                System.out.print(C[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Input: 5 6 7 8 1 2 3 4 → Output:
+
+4 4
+4 4
+
+// Reverse Number
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+    static int reverse(int n) {
+        int rev = 0;
+
+        while (n > 0) {
+            int d = n % 10;
+            rev = rev * 10 + d;
+            n = n / 10;
+        }
+
+        return rev;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(reverse(n));
+    }
+}
+
+Input: 1234 → Output: 4321
+
+//Palindrome Number
+import java.util.Scanner;
+
+public class PalindromeNumber {
+
+    static int reverse(int n) {
+        int rev = 0;
+
+        while (n > 0) {
+            int d = n % 10;
+            rev = rev * 10 + d;
+            n = n / 10;
+        }
+
+        return rev;
+    }
+
+    static boolean palindrome(int n) {
+        return n == reverse(n);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(palindrome(n));
+    }
+}
+
+Input: 121 → Output: true
+
+
+
+
+
+
+
+
