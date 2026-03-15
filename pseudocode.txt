@@ -1,0 +1,368 @@
+//Simple If
+DECLARE X:INTEGER
+READ X
+IF X>5 THEN
+  PRINT "X is greater than 5"
+END IF
+
+//if-else
+DECLARE X:INTEGER
+READ X
+IF X>0 THEN
+  PRINT "Number is Positive"
+ELSE
+  PRINT "Number is Negative"
+END IF
+
+//even-dd
+DECLARE N:INTEGER
+READ N
+IF N MOD 2 = 0 THEN
+  PRINT "Number is Even"
+ELSE
+  PRINT "Number is Odd"
+END IF
+
+//Positive or Negative
+DECLARE N:INTEGER
+READ N
+IF N>=0 THEN
+  PRINT "Number is Positive"
+ELSE
+  PRINT "Number is Negative"
+END IF
+
+//Greatest of Two Numbers
+DECLARE num1,num2:INTEGER
+READ num1,num2
+IF num1>num2 THEN
+  PRINT "num1 is greater"
+ELSE
+  PRINT "num2 is greater"
+END IF
+
+//If–Else If Ladder (Two Numbers >, <, =)
+DECLARE A,B:INTEGER
+READ A,B
+IF A>B THEN
+  PRINT "A is greater than B"
+ELSE IF A<B THEN
+  PRINT "A is less than B"
+ELSE
+  PRINT "Both numbers are equal"
+END IF
+
+//Grades (A B C D F)
+DECLARE MARKS:INTEGER
+READ MARKS
+IF MARKS>=90 THEN
+  PRINT "Grade A"
+ELSE IF MARKS>=80 THEN
+  PRINT "Grade B"
+ELSE IF MARKS>=70 THEN
+  PRINT "Grade C"
+ELSE IF MARKS>=60 THEN
+  PRINT "Grade D"
+ELSE
+  PRINT "Grade F"
+END IF
+
+//Coordinates – Which Quadrant
+DECLARE X,Y:INTEGER
+READ X,Y
+IF X>0 AND Y>0 THEN
+  PRINT "Quadrant 1"
+ELSE IF X<0 AND Y>0 THEN
+  PRINT "Quadrant 2"
+ELSE IF X<0 AND Y<0 THEN
+  PRINT "Quadrant 3"
+ELSE IF X>0 AND Y<0 THEN
+  PRINT "Quadrant 4"
+ELSE
+  PRINT "Point lies on Axis"
+END IF
+
+//Nested If (Username & Password)
+DECLARE USERNAME,PASSWORD:STRING
+READ USERNAME
+READ PASSWORD
+
+IF USERNAME = "admin" THEN
+   IF PASSWORD = "1234" THEN
+      PRINT "Login Successful"
+   ELSE
+      PRINT "Incorrect Password"
+   END IF
+ELSE
+   PRINT "Invalid Username"
+END IF
+
+......................................Arrays.........................
+//access array
+DECLARE A[5]:INTEGER
+DECLARE I:INTEGER
+
+FOR I ← 0 TO 4
+   READ A[I]
+END FOR
+
+FOR I ← 0 TO 4
+   PRINT A[I]
+END FOR
+
+//Add Elements of an Array
+DECLARE A[5]:INTEGER
+DECLARE I,SUM:INTEGER
+SET SUM = 0
+
+FOR I ← 0 TO 4
+   READ A[I]
+   SET SUM = SUM + A[I]
+END FOR
+
+PRINT "Sum =", SUM
+
+//Maximum Element in an Array
+DECLARE A[5]:INTEGER
+DECLARE I,MAX:INTEGER
+
+FOR I ← 0 TO 4
+   READ A[I]
+END FOR
+
+SET MAX = A[0]
+
+FOR I ← 1 TO 4
+   IF A[I] > MAX THEN
+      SET MAX = A[I]
+   END IF
+END FOR
+
+PRINT "Maximum =", MAX
+
+//Minimum Element in an Array
+DECLARE A[5]:INTEGER
+DECLARE I,MIN:INTEGER
+
+FOR I ← 0 TO 4
+   READ A[I]
+END FOR
+
+SET MIN = A[0]
+
+FOR I ← 1 TO 4
+   IF A[I] < MIN THEN
+      SET MIN = A[I]
+   END IF
+END FOR
+
+PRINT "Minimum =", MIN
+
+
+//Access Elements of a 2D Array
+DECLARE A[2][2]:INTEGER
+DECLARE I,J:INTEGER
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ A[I][J]
+   END FOR
+END FOR
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      PRINT A[I][J]
+   END FOR
+END FOR
+
+//Sum of Elements in a 2D Array
+DECLARE A[2][2]:INTEGER
+DECLARE I,J,SUM:INTEGER
+SET SUM = 0
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ A[I][J]
+      SET SUM = SUM + A[I][J]
+   END FOR
+END FOR
+
+PRINT "Sum =", SUM
+
+//Addition of Two 2D Arrays (2×2)
+DECLARE A[2][2],B[2][2],C[2][2]:INTEGER
+DECLARE I,J:INTEGER
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ A[I][J]
+   END FOR
+END FOR
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ B[I][J]
+   END FOR
+END FOR
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      SET C[I][J] = A[I][J] + B[I][J]
+      PRINT C[I][J]
+   END FOR
+END FOR
+
+//Subtraction of Two 2D Arrays
+DECLARE A[2][2],B[2][2],C[2][2]:INTEGER
+DECLARE I,J:INTEGER
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ A[I][J]
+   END FOR
+END FOR
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      READ B[I][J]
+   END FOR
+END FOR
+
+FOR I ← 0 TO 1
+   FOR J ← 0 TO 1
+      SET C[I][J] = A[I][J] - B[I][J]
+      PRINT C[I][J]
+   END FOR
+END FOR
+
+......................................Function & Procedures.........................
+//Procedure to Add Two Numbers
+PROCEDURE ADD(X:INTEGER,Y:INTEGER)
+   DECLARE SUM:INTEGER
+   SET SUM = X + Y
+   PRINT "Sum =", SUM
+END PROCEDURE
+
+//Function to Add Two Numbers
+FUNCTION ADD(X:INTEGER,Y:INTEGER):INTEGER
+   RETURN   X + Y
+END FUNCTION
+PRINT ADD(5,89)
+
+//Function to Find Area of Triangle
+FUNCTION TRIANGLE_AREA(BASE:REAL,HEIGHT:REAL):REAL
+   RETURN 0.5 * BASE * HEIGHT
+END FUNCTION
+
+PRINT TRIANGLE_AREA(10,5)
+
+//Function to Find Area of Circle
+FUNCTION CIRCLE_AREA(R:INTEGER):REAL
+   RETURN 3.14 * R * R
+END FUNCTION
+
+PRINT CIRCLE_AREA(7)
+
+//Function to Find Greatest of Two Numbers
+FUNCTION MAX(A:INTEGER,B:INTEGER):INTEGER
+   IF A>B THEN
+      RETURN A
+   ELSE
+      RETURN B
+   END IF
+END FUNCTION
+
+PRINT MAX(10,25)
+
+//Function to Find Absolute Value
+FUNCTION ABS_VAL(N:INTEGER):INTEGER
+   IF N<0 THEN
+      RETURN -N
+   ELSE
+      RETURN N
+   END IF
+END FUNCTION
+
+PRINT ABS_VAL(-8)
+
+//Function to Find Factorial
+FUNCTION FACT(N:INTEGER):INTEGER
+   DECLARE I,F:INTEGER
+   SET F = 1
+
+   FOR I ← 1 TO N
+      SET F = F * I
+   END FOR
+
+   RETURN F
+END FUNCTION
+
+PRINT FACT(5)
+
+//Function to Find Sum of Series 1 to N
+FUNCTION SUM_SERIES(N:INTEGER):INTEGER
+   DECLARE I,SUM:INTEGER
+   SET SUM = 0
+
+   FOR I ← 1 TO N
+      SET SUM = SUM + I
+   END FOR
+
+   RETURN SUM
+END FUNCTION
+
+PRINT SUM_SERIES(10)
+
+
+//Function to Find  Series Sum
+FUNCTION SeriesSum(N:INTEGER):REAL
+   DECLARE I:INTEGER
+   DECLARE SUM:REAL
+   SET SUM = 0
+
+   FOR I ← 1 TO N
+      SET SUM = SUM + 1/I
+   END FOR
+
+   RETURN SUM
+END FUNCTION
+
+PRINT SeriesSum(5)
+
+//Function to Reverse Number
+FUNCTION REVERSE(N:INTEGER):INTEGER
+   DECLARE REV,DIGIT:INTEGER
+   SET REV = 0
+
+   WHILE N>0
+      SET DIGIT = N MOD 10
+      SET REV = REV*10 + DIGIT
+      SET N = N / 10
+   END WHILE
+
+   RETURN REV
+END FUNCTION
+
+PRINT REVERSE(1234)
+
+
+//Function to Check Palindrome
+FUNCTION PALINDROME(N:INTEGER):BOOLEAN
+   IF N = REVERSE(N) THEN
+      RETURN TRUE
+   ELSE
+      RETURN FALSE
+   END IF
+END FUNCTION
+
+PRINT PALINDROME(121)
+
+
+
+
+
+
+
+   
+
+   
